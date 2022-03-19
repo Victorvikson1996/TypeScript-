@@ -30,3 +30,62 @@ employe = [
 let pid: string | number = 22
 
 pid = '22'
+
+//Enum
+
+enum Direction1 {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+
+enum Direction2 {
+  Up = 'Up',
+  Down = 'Down',
+  Left = 'Left',
+  Right = 'Right',
+}
+console.log(Direction2.Left)
+
+// object
+
+type User = {
+  id: number
+  name: string
+}
+
+const user: User = {
+  id: 1,
+  name: 'john',
+}
+
+// Type Assertion
+
+let cid: any = 1
+
+// let customerId = <number>cid
+
+let customerId = cid as number
+
+//function
+
+function addNum(x: number, y: number): number {
+  return x + y
+}
+
+function log(message: string | number): void {
+  console.log(message)
+}
+
+//interfaces
+
+interface Deal {
+  id: number
+  name: string
+}
+
+const deal: Deal = {
+  id: 1,
+  name: 'john',
+}
